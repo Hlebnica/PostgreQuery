@@ -1,5 +1,5 @@
 CREATE TABLE projects(
-	id_project INT PRIMARY KEY NOT NULL,
+	id_project SERIAL PRIMARY KEY,
 	project_name VARCHAR(120) NOT NULL,
 	id_city INT NOT NULL,
 	address VARCHAR(120),

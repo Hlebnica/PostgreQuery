@@ -1,5 +1,5 @@
 CREATE TABLE providers(
-	id_provider INT PRIMARY KEY NOT NULL,
+	id_provider SERIAL PRIMARY KEY,
 	provider_name VARCHAR(120) NOT NULL,
 	id_city INT NOT NULL,
 	provider_address VARCHAR(120) DEFAULT 'Неизвестен' NOT NULL,

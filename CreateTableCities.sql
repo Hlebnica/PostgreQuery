@@ -1,4 +1,4 @@
 CREATE TABLE cities(
-	id_city INT PRIMARY KEY NOT NULL,
+	id_city SERIAL PRIMARY KEY,
 	city_name VARCHAR(120) NOT NULL
 )
