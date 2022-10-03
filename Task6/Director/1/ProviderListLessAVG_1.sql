@@ -6,7 +6,7 @@ SELECT
 		WHEN providers.provider_rating<6
 		THEN 'Ненадежный'
 	END Надежность_поставщика,
-	SUM(supplies.id_provider) AS "Общая сумма поставок"
+	COUNT(supplies.id_provider) AS "Общая сумма поставок"
 FROM providers
 	INNER JOIN supplies ON supplies.id_provider = providers.id_provider
 GROUP BY provider_name, providers.provider_rating
