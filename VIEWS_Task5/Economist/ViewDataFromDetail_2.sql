@@ -7,7 +7,7 @@ CREATE VIEW data_from_details_economist AS
 	detail_name AS Название,
 	detail_price AS Цена,
 	detail_color AS Цвет,
-	detail_weight AS Вес,
+	detail_weight/1000::float4 AS "Вес, кг",
 	CASE
 		WHEN detail_price>=1000
 		THEN 'Дорогая'

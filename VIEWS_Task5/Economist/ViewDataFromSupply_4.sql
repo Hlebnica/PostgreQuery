@@ -23,7 +23,7 @@ CREATE VIEW data_from_supplies_economist AS
 			THEN 'Ненадежный'        
 		END Надежность_провайдера,
 		supplies.supplies_quantity AS "Количество деталей",
-		(details.detail_weight * supplies.supplies_quantity) AS "Вес поставки",
+		(details.detail_weight * supplies.supplies_quantity)/1000::float4 AS "Вес поставки, кг",
 		(details.detail_price * supplies.supplies_quantity) AS "Стоимость поставки"
 	FROM supplies 
 	INNER JOIN providers ON providers.id_provider = supplies.id_provider
